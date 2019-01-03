@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>File uploading</title>
+</head>
+<body>
+	<center>
+		<form method="post" class="post-form" enctype="multipart/form-data" action="{% url 'save' %}">
+			{% csrf_token %}
+			{{form.as_p}}
+
+			<button type="submit" class="save btn btn-default">Save</button>
+		</form>
+	</center>
+</body>
+</html>
